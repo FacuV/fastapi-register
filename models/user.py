@@ -1,6 +1,6 @@
 from curses import meta
 from sqlalchemy import Table, Column
-from sqlalchemy.sql.sqltypes import Integer, String, DateTime, Boolean
+from sqlalchemy.sql.sqltypes import Integer, String
 from config.db import meta, engine
 
 users = Table("users", meta, Column(

@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from routes.user import user
+from routes.tasks import task
 
 app = FastAPI(
     title="FastAPI To-do-list",
@@ -8,6 +9,11 @@ app = FastAPI(
     openapi_tags=[{
         "name": "User",
         "description": "User management"
+    }
+    , {
+        "name": "Task",
+        "description": "Task management"
     }]
 )
 app.include_router(user)
+app.include_router(task)
